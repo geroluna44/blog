@@ -1,0 +1,27 @@
+ROADMAP — Blog "El Cordón"
+==========================
+
+Logrado
+  [x] Scaffolding del blog estático
+      [x] HTML/CSS/JS vanilla + Markdown local (markdown-it)
+      [x] build.js genera index, posts, tags, feed.xml y search-index.json
+      [x] Diseño minimalista con dark mode
+      [x] Búsqueda client-side
+      [x] Post de ejemplo en español
+  [x] Publicado en GitHub Pages
+      [x] Repo + remote GitHub (geroluna44/blog)
+      [x] Rutas relativas (base tag) para subruta /blog/
+      [x] Workflow de deploy (publish.yml)
+      [x] Sitio en vivo: https://geroluna44.github.io/blog/
+
+Pendiente
+  [x] PRIORITARIO: aplicar estilo gotham-vim (paleta oscura de colores)
+  [x] PRIORITARIO: cambiar la tipografía a JetBrains Mono auto-alojada
+  [ ] Contenido: escribir posts reales
+  [ ] Analytics: activar GoatCounter (campo vacío en site.config.js)
+  [ ] Comentarios: configurar Giscus (requiere GitHub Discussions en el repo)
+  [ ] Revisar site.title/author en site.config.js (index muestra "El Cordón · El Cordón")
+  [ ] Opcional: sitemap.xml y meta tags para SEO
+  [ ] Opcional: navegación anterior/siguiente en posts
+  [ ] Opcional: página "Acerca de"
+  [ ] Actualizar versiones de actions (aviso de deprecación de Node 20)

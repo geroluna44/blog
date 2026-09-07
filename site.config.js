@@ -24,7 +24,7 @@ export default {
       reactionsEnabled: "1",
       emitMetadata: "0",
       inputPosition: "top",
-      theme: "light",
+      theme: "transparent_dark",
       lang: "es",
     },
   },
