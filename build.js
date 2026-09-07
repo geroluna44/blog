@@ -122,24 +122,11 @@ function analyticsSnippet() {
   return `<script data-goatcounter="https://${config.analytics.goatcounter}/count" async src="//gc.zgo.at/count.js"></script>`;
 }
 
-function commentsSnippet() {
-  const g = config.comments.giscus;
-  if (!g || !g.repo) return "";
-  return `
-  <div class="giscus"></div>
-  <script src="https://giscus.app/client.js"
-    data-repo="${g.repo}"
-    data-repo-id="${g.repoId}"
-    data-category="${g.category}"
-    data-category-id="${g.categoryId}"
-    data-mapping="${g.mapping}"
-    data-strict="${g.strict}"
-    data-reactions-enabled="${g.reactionsEnabled}"
-    data-emit-metadata="${g.emitMetadata}"
-    data-input-position="${g.inputPosition}"
-    data-theme="${g.theme}"
-    data-lang="${g.lang}"
-    async></script>`;
+function contactCard() {
+  return `<aside class="contact-card">
+  <p><strong>Próximamente, sección de comentarios.</strong></p>
+  <p>Escríbeme si no a mi mail: geroluna44[arroba]proton.me</p>
+</aside>`;
 }
 
 function rssFeed(posts) {
@@ -206,7 +193,7 @@ function main() {
       isoDate: post.date,
       date: post.dateLabel,
       content: post.html,
-      comments: commentsSnippet(),
+      contact: contactCard(),
     });
     contentHtml = contentHtml.replace(/{{#tags}}[\s\S]*?{{\/tags}}/, tagBlock);
     const page = renderBase(contentHtml, post.title, post.description);

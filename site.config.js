@@ -15,10 +15,10 @@ export default {
     // Configuración de Giscus. Deja vacío para desactivar.
     // Requiere un repo de GitHub con Discussions habilitado.
     giscus: {
-      repo: "geroluna44/blog",
-      repoId: "R_kgDOUQx7zw",
+      repo: "",
+      repoId: "",
       category: "Announcements",
-      categoryId: "DIC_kwDOUQx7z84DFDKC",
+      categoryId: "",
       mapping: "pathname",
       strict: "0",
       reactionsEnabled: "1",
