@@ -281,13 +281,19 @@ main {
 }
 
 .contact-card {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   padding: 1rem 1.1rem;
   border: 1px solid var(--border);
   border-radius: 3px;
   color: var(--muted);
   background: var(--bg-alt);
   font-size: 0.75rem;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
 }
 
 .contact-card p {
