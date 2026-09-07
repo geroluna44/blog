@@ -4,7 +4,6 @@ date: 2022-09-19
 description: "Reseña del videojuego Red Dead Redemption 2."
 tags: ["reseñas de videojuegos", "videojuegos"]
 ---
-# Red Dead Redemption 2
 > Entrada de mi viejo blog
 
 Este análisis trata de un videojuego que me marcó, que me hizo reflexionar sobre mi vida y su sentido. A lo largo de 116 horas viví la experiencia única de vivir en el salvaje oeste estadounidense. Una campaña que, según HowLongToBeat, se completa en 50 horas aprox.
