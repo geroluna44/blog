@@ -6,6 +6,7 @@ import config from "./site.config.js";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const CONTENT_DIR = join(ROOT, "content", "posts");
+const AHORA_FILE = join(ROOT, "content", "ahora.md");
 const TEMPLATE_DIR = join(ROOT, "src", "templates");
 const DIST_DIR = join(ROOT, "dist");
 const { site } = config;
@@ -218,8 +219,12 @@ function main() {
     renderBase(archiveContent, "Blog", site.description)
   );
 
-  const ahoraContent = `<h1 class="page-title">¡Ahora!</h1>
-<p class="page-muted">Página en construcción. Pronto habrá contenido aquí.</p>`;
+  const ahoraRaw = readFileSync(AHORA_FILE, "utf8");
+  const { data: ahoraData, content: ahoraMarkdown } = parseFrontmatter(ahoraRaw);
+  const ahoraDate = ahoraData.date
+    ? `<p class="page-muted">Actualizado: <time datetime="${ahoraData.date}">${formatDate(ahoraData.date)}</time></p>`
+    : "";
+  const ahoraContent = `<h1 class="page-title">¡Ahora!</h1>\n${ahoraDate}\n${md.render(ahoraMarkdown)}`;
   writeFileSync(join(DIST_DIR, "ahora", "index.html"), renderBase(ahoraContent, "¡Ahora!", ""));
 
   for (const post of posts) {

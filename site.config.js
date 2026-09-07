@@ -18,6 +18,7 @@ export default {
     buttonwall: [
       { file: "join-the-fediverse.gif", url: "https://es.wikipedia.org/wiki/Fediverso" },
       { file: "linux-p.gif", url: "https://distrowatch.com" },
+      { file: "by-nc-nd.gif", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/" },
       { file: "dont-be-a-phone-chump-get-a-computer.gif", url: "" },
     ],
   },
