@@ -121,11 +121,21 @@ function renderBase(content, title, description) {
 }
 
 function footerButtonwall() {
-  const url = config.contact?.buttonwall;
-  if (url) {
-    return `<a class="footer-link" href="${escapeHtml(url)}" rel="me noopener">Button Wall</a>`;
+  const buttons = Array.isArray(config.contact?.buttonwall)
+    ? config.contact.buttonwall
+    : [];
+  if (buttons.length === 0) {
+    return `<span class="footer-link is-placeholder" title="Próximamente">Button Wall</span>`;
   }
-  return `<span class="footer-link is-placeholder" title="Próximamente">Button Wall</span>`;
+  return buttons
+    .map(({ file, url }) => {
+      const src = `public/buttonwall/${file}`;
+      const img = `<img class="buttonwall-img" src="${src}" alt="${escapeHtml(file.replace(/\.gif$/i, ""))}" width="88" height="31">`;
+      return url
+        ? `<a class="buttonwall-link" href="${escapeHtml(url)}" rel="me noopener" target="_blank">${img}</a>`
+        : `<span class="buttonwall-link is-placeholder">${img}</span>`;
+    })
+    .join("");
 }
 
 function analyticsSnippet() {

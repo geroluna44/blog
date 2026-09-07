@@ -13,8 +13,13 @@ export default {
   },
   contact: {
     email: "geroluna44@proton.me",
-    // URL de tu Button Wall. Vacío = se muestra como "próximamente".
-    buttonwall: "",
+    // Button Wall: imágenes en src/public/buttonwall/, cada una con su URL.
+    // URL vacía = imagen sin enlace.
+    buttonwall: [
+      { file: "join-the-fediverse.gif", url: "https://es.wikipedia.org/wiki/Fediverso" },
+      { file: "linux-p.gif", url: "https://distrowatch.com" },
+      { file: "dont-be-a-phone-chump-get-a-computer.gif", url: "" },
+    ],
   },
   comments: {
     // Configuración de Giscus. Deja vacío para desactivar.
