@@ -20,7 +20,7 @@ Pendiente
   [x] Convención de imágenes: `src/public/images/<slug-del-post>/` con nombres en kebab-case y formato WebP
   [ ] Contenido: escribir posts reales
   [ ] Analytics: activar GoatCounter (campo vacío en site.config.js)
-  [ ] Comentarios: configurar Giscus (requiere GitHub Discussions en el repo)
+  [x] Comentarios: configurar Giscus con GitHub Discussions y tema Gotham oscuro
   [ ] Revisar site.title/author en site.config.js (index muestra "El Cordón · El Cordón")
   [ ] Opcional: sitemap.xml y meta tags para SEO
   [ ] Opcional: navegación anterior/siguiente en posts
