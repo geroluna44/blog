@@ -2,7 +2,7 @@ export default {
   site: {
     title: "El Cordón",
     author: "geroluna44",
-    url: "https://ejemplo.com",
+    url: "https://geroluna44.github.io/blog/",
     lang: "es",
     description: "Bienvenido a mi blog personal. Escribo sobre videojuegos, arte, política, software, religión, música, filosofia... de todo un poco.",
   },

@@ -109,6 +109,7 @@ function renderBase(content, title, description) {
     title: `${title} · ${site.title}`,
     description: description || site.description,
     siteTitle: site.title,
+    siteUrl: site.url,
     year: new Date().getFullYear(),
     author: site.author,
     content,
@@ -182,7 +183,7 @@ function main() {
         dateLabel: formatDate(data.date || "1970-01-01"),
         description: data.description || "",
         tags: Array.isArray(data.tags) ? data.tags : [],
-        url: `/posts/${slug}/`,
+        url: `posts/${slug}/`,
         content,
         html: md.render(content),
       };
@@ -197,7 +198,7 @@ function main() {
 
   for (const post of posts) {
     const tagBlock = post.tags
-      .map((tag) => `<a class="tag" href="/tags/${slugify(tag)}/">${escapeHtml(tag)}</a>`)
+      .map((tag) => `<a class="tag" href="tags/${slugify(tag)}/">${escapeHtml(tag)}</a>`)
       .join(" ");
     let contentHtml = renderTemplate(postTemplate, {
       title: escapeHtml(post.title),

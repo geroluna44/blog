@@ -5,7 +5,7 @@
   if (!input || !results || !main) return;
 
   var index = [];
-  fetch("/search-index.json")
+  fetch("search-index.json")
     .then(function (res) {
       if (!res.ok) throw new Error("No se pudo cargar el índice de búsqueda");
       return res.json();
