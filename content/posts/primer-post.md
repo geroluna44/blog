@@ -10,6 +10,8 @@ tags: ["bienvenida", "markdown"]
 Este es el primer post del blog. Todo el contenido se escribe en **Markdown** y el
 script de build genera el sitio estático.
 
+![Hamburguesa en la pantalla de la computadora](public/images/hamburguesa.webp)
+
 ## Características
 
 - Posts escritos en Markdown con frontmatter.
