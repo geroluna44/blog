@@ -17,6 +17,7 @@ Logrado
 Pendiente
   [x] PRIORITARIO: aplicar estilo gotham-vim (paleta oscura de colores)
   [x] PRIORITARIO: cambiar la tipografía a JetBrains Mono auto-alojada
+  [x] Convención de imágenes: `src/public/images/<slug-del-post>/` con nombres en kebab-case y formato WebP
   [ ] Contenido: escribir posts reales
   [ ] Analytics: activar GoatCounter (campo vacío en site.config.js)
   [ ] Comentarios: configurar Giscus (requiere GitHub Discussions en el repo)

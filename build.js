@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, writeFileSync, mkdirSync, cpSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, cpSync, rmSync } from "node:fs";
 import { join, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import MarkdownIt from "markdown-it";
@@ -170,6 +170,7 @@ ${items}
 }
 
 function main() {
+  rmSync(DIST_DIR, { recursive: true, force: true });
   const files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md"));
   const posts = files
     .map((file) => {
