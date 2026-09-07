@@ -1,0 +1,8 @@
+{{#posts}}
+<article class="post-card">
+  <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+  <time class="post-date" datetime="{{isoDate}}">{{date}}</time>
+  <p class="post-description">{{description}}</p>
+  {{#tags}}<a class="tag" href="/tags/{{slug}}/">{{name}}</a> {{/tags}}
+</article>
+{{/posts}}

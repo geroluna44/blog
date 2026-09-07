@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Blog minimalista estático con Markdown y HTML/CSS/JS vanilla",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx --yes serve dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}

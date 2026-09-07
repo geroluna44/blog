@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="{{siteTitle}}" href="/feed.xml">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="site-title" href="/">{{siteTitle}}</a>
+      <input type="search" id="search" placeholder="Buscar posts..." autocomplete="off">
+    </nav>
+  </header>
+  <main>
+    {{content}}
+  </main>
+  <div id="search-results" hidden></div>
+  <footer class="site-footer">
+    <p>© {{year}} {{author}}</p>
+  </footer>
+  <script src="/assets/js/search.js"></script>
+  {{analytics}}
+</body>
+</html>
