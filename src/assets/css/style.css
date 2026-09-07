@@ -89,6 +89,27 @@ a:focus-visible {
   gap: 1rem;
 }
 
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.nav-link:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav-link:hover::after {
+  content: "_";
+  color: var(--accent);
+}
+
 .site-title {
   color: var(--fg);
   font-size: 1rem;
@@ -318,6 +339,74 @@ main {
   font-size: 0.7rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.footer-link.is-placeholder {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.footer-link.is-placeholder:hover {
+  text-decoration: none;
+}
+
+.home-description {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.home-recent-title {
+  margin: 0 0 1.5rem;
+  color: var(--accent-dim);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.home-more {
+  margin: 0.5rem 0 0;
+}
+
+.more-link {
+  font-size: 0.85rem;
+}
+
+.more-link::after {
+  content: " →";
+  color: var(--accent-dim);
+}
+
+.archive-title,
+.page-title {
+  margin: 0 0 2.5rem;
+  color: var(--fg);
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+}
+
+.page-muted {
+  color: var(--muted);
+}
+
+.site-copyright {
+  margin: 0;
+}
+
 ::-webkit-scrollbar {
   width: 0.65rem;
 }
@@ -336,6 +425,10 @@ main {
   .site-nav {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .site-nav-links {
+    order: 3;
   }
 
   #search {

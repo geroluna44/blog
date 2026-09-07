@@ -11,6 +11,11 @@ export default {
     // Vacío = analytics desactivado.
     goatcounter: "",
   },
+  contact: {
+    email: "geroluna44@proton.me",
+    // URL de tu Button Wall. Vacío = se muestra como "próximamente".
+    buttonwall: "",
+  },
   comments: {
     // Configuración de Giscus. Deja vacío para desactivar.
     // Requiere un repo de GitHub con Discussions habilitado.

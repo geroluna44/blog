@@ -20,6 +20,7 @@ const baseTemplate = readTemplate("base.html");
 const postListTemplate = readTemplate("post-list.html");
 const postTemplate = readTemplate("post.html");
 const tagTemplate = readTemplate("tag.html");
+const homeTemplate = readTemplate("home.html");
 
 function escapeHtml(str) {
   return String(str)
@@ -106,7 +107,7 @@ function renderTemplate(template, vars) {
 function renderBase(content, title, description) {
   return renderTemplate(baseTemplate, {
     lang: site.lang,
-    title: `${title} · ${site.title}`,
+    title: title ? `${title} · ${site.title}` : site.title,
     description: description || site.description,
     siteTitle: site.title,
     siteUrl: site.url,
@@ -114,7 +115,17 @@ function renderBase(content, title, description) {
     author: site.author,
     content,
     analytics: analyticsSnippet(),
+    contactEmail: config.contact?.email || "",
+    footerButtonwall: footerButtonwall(),
   });
+}
+
+function footerButtonwall() {
+  const url = config.contact?.buttonwall;
+  if (url) {
+    return `<a class="footer-link" href="${escapeHtml(url)}" rel="me noopener">Button Wall</a>`;
+  }
+  return `<span class="footer-link is-placeholder" title="Próximamente">Button Wall</span>`;
 }
 
 function analyticsSnippet() {
@@ -179,10 +190,27 @@ function main() {
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   mkdirSync(join(DIST_DIR, "posts"), { recursive: true });
+  mkdirSync(join(DIST_DIR, "blog"), { recursive: true });
+  mkdirSync(join(DIST_DIR, "ahora"), { recursive: true });
   mkdirSync(join(DIST_DIR, "tags"), { recursive: true });
 
-  const listHtml = renderList(posts);
-  writeFileSync(join(DIST_DIR, "index.html"), renderBase(listHtml, site.title, site.description));
+  const previews = renderList(posts.slice(0, 3));
+  const homeContent = renderTemplate(homeTemplate, {
+    blogDescription: site.description,
+    previews,
+    blogUrl: "blog/",
+  });
+  writeFileSync(join(DIST_DIR, "index.html"), renderBase(homeContent, "", site.description));
+
+  const archiveContent = `<h1 class="archive-title">Blog</h1>\n` + renderList(posts);
+  writeFileSync(
+    join(DIST_DIR, "blog", "index.html"),
+    renderBase(archiveContent, "Blog", site.description)
+  );
+
+  const ahoraContent = `<h1 class="page-title">¡Ahora!</h1>
+<p class="page-muted">Página en construcción. Pronto habrá contenido aquí.</p>`;
+  writeFileSync(join(DIST_DIR, "ahora", "index.html"), renderBase(ahoraContent, "¡Ahora!", ""));
 
   for (const post of posts) {
     const tagBlock = post.tags
