@@ -2,7 +2,7 @@
 title: "Chau Stadia. No te voy a extrañar"
 date: 2022-10-4
 description: "Un descargo sobre Google y las promesas de futuro"
-tags: ["videojuegos" "mundo tech"]
+tags: ["videojuegos", "mundo tech"]
 ---
 > Entrada de mi viejo blog
 
