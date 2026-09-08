@@ -1,6 +1,6 @@
 ---
 title: "Por qué creé este blog"
-date: 2026-10-7
+date: 2026-09-7
 description: "Primer artículo de este blog y el comienzo de mi sitio personal"
 tags: ["este sitio", "web"]
 ---
