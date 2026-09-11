@@ -7,5 +7,5 @@ slug: links
 
 
 
-![image](~/public/images/error.webp)
+![image](blog/public/images/error.webp)
 ## Sección en construcción
