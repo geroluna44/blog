@@ -2,7 +2,7 @@
 date: 2026-09-07
 ---
 
-Bienvenido a esta sección que se ha puesto de moda en los blogs que leo. Me parece interesante como una forma de hacer más inmediato el tema de los blogs.
+Bienvenido a esta sección que [se ha puesto de moda](https://nownownow.com/about) en los blogs que leo. Me parece interesante como una forma de hacer más inmediato el tema de los blogs.
 
 ## Videojuegos
 

@@ -6,8 +6,9 @@ import config from "./site.config.js";
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const CONTENT_DIR = join(ROOT, "content", "posts");
-const AHORA_FILE = join(ROOT, "content", "ahora.md");
+const STATIC_DIR = join(ROOT, "content");
 const TEMPLATE_DIR = join(ROOT, "src", "templates");
+const STATIC_PAGES = ["quien-soy.md", "links.md", "ahora.md"];
 const DIST_DIR = join(ROOT, "dist");
 const { site } = config;
 
@@ -151,6 +152,18 @@ function contactCard() {
 </aside>`;
 }
 
+function renderStaticPage(file) {
+  const raw = readFileSync(join(STATIC_DIR, file), "utf8");
+  const { data, content } = parseFrontmatter(raw);
+  const slug = data.slug || basename(file, ".md");
+  const date = data.date
+    ? `<p class="page-muted">Actualizado: <time datetime="${data.date}">${formatDate(data.date)}</time></p>`
+    : "";
+  const html = `<h1 class="page-title">${escapeHtml(data.title || slug)}</h1>\n${date}\n${md.render(content)}`;
+  mkdirSync(join(DIST_DIR, slug), { recursive: true });
+  writeFileSync(join(DIST_DIR, slug, "index.html"), renderBase(html, data.title || slug, ""));
+}
+
 function rssFeed(posts) {
   const items = posts
     .slice(0, 10)
@@ -202,7 +215,6 @@ function main() {
 
   mkdirSync(join(DIST_DIR, "posts"), { recursive: true });
   mkdirSync(join(DIST_DIR, "blog"), { recursive: true });
-  mkdirSync(join(DIST_DIR, "ahora"), { recursive: true });
   mkdirSync(join(DIST_DIR, "tags"), { recursive: true });
 
   const previews = renderList(posts.slice(0, 3));
@@ -219,13 +231,9 @@ function main() {
     renderBase(archiveContent, "Blog", site.description)
   );
 
-  const ahoraRaw = readFileSync(AHORA_FILE, "utf8");
-  const { data: ahoraData, content: ahoraMarkdown } = parseFrontmatter(ahoraRaw);
-  const ahoraDate = ahoraData.date
-    ? `<p class="page-muted">Actualizado: <time datetime="${ahoraData.date}">${formatDate(ahoraData.date)}</time></p>`
-    : "";
-  const ahoraContent = `<h1 class="page-title">¡Ahora!</h1>\n${ahoraDate}\n${md.render(ahoraMarkdown)}`;
-  writeFileSync(join(DIST_DIR, "ahora", "index.html"), renderBase(ahoraContent, "¡Ahora!", ""));
+  for (const page of STATIC_PAGES) {
+    renderStaticPage(page);
+  }
 
   for (const post of posts) {
     const tagBlock = post.tags
