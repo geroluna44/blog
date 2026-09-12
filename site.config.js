@@ -20,6 +20,8 @@ export default {
       { file: "linux-p.gif", url: "https://distrowatch.com" },
       { file: "by-nc-nd.gif", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/" },
       { file: "dont-be-a-phone-chump-get-a-computer.gif", url: "" },
+      { file: "neovim.gif", url: "https://neovim.io" },
+      { file: "steam.gif", url: "https://steamcommunity.com/id/geroluna_44" },
     ],
   },
   comments: {
