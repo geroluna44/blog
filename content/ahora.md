@@ -1,5 +1,5 @@
 ---
-date: 2026-09-07
+date: 2026-09-24
 ---
 
 Bienvenido a esta sección que [se ha puesto de moda](https://nownownow.com/about) en los blogs que leo. Me parece interesante como una forma de hacer más inmediato el tema de los blogs.
@@ -12,10 +12,8 @@ Bienvenido a esta sección que [se ha puesto de moda](https://nownownow.com/abou
 
 ## Series / Últimas peliculas que vi
 - Better Call Saul
-- Dexter
-- Las locuras del emperador (2000)
+- Mr Robot
 - Perfect Days (2023) (recomendadísima)
 
 ## Libros
-Estoy releyendo todo Harry Potter. Voy por El prisionero de Azkaban
-
+- Estoy releyendo todo Harry Potter. Voy por El Caliz de Fuego
