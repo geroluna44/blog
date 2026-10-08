@@ -137,7 +137,7 @@ function footerButtonwall() {
   return buttons
     .map(({ file, url }) => {
       const src = `public/buttonwall/${file}`;
-      const img = `<img class="buttonwall-img" src="${src}" alt="${escapeHtml(file.replace(/\.gif$/i, ""))}" width="88" height="31">`;
+      const img = `<img class="buttonwall-img" src="${src}" alt="${escapeHtml(file.replace(/\.[^.]+$/, ""))}" width="88" height="31">`;
       return url
         ? `<a class="buttonwall-link" href="${escapeHtml(url)}" rel="me noopener" target="_blank">${img}</a>`
         : `<span class="buttonwall-link is-placeholder">${img}</span>`;

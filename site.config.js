@@ -16,7 +16,7 @@ export default {
     // Button Wall: imágenes en src/public/buttonwall/, cada una con su URL.
     // URL vacía = imagen sin enlace.
     buttonwall: [
-      { file: "join-the-fediverse.gif", url: "https://es.wikipedia.org/wiki/Fediverso" },
+      { file: "banner-blogblog.webp", url: "https://blogblog.es" },
       { file: "linux-p.gif", url: "https://distrowatch.com" },
       { file: "by-nc-nd.gif", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/" },
       { file: "dont-be-a-phone-chump-get-a-computer.gif", url: "" },
