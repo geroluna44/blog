@@ -13,8 +13,7 @@ Bienvenido a esta sección que [se ha puesto de moda](https://nownownow.com/abou
 ## Series / Últimas peliculas que vi
 - Better Call Saul
 - Mr Robot
-- Perfect Days (2023) (recomendadísima)
-
+- The Hundred-Foot Journey
 ## Libros
 - Estoy releyendo todo Harry Potter. Voy por El Caliz de Fuego
 - Colección El Aleph - Borges
