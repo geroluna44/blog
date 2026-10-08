@@ -32,6 +32,10 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+function obfuscateEmail(email) {
+  return String(email).replace("@", "[arroba]");
+}
+
 function slugify(str) {
   return String(str)
     .toLowerCase()
@@ -117,7 +121,7 @@ function renderBase(content, title, description) {
     author: site.author,
     content,
     analytics: analyticsSnippet(),
-    contactEmail: config.contact?.email || "",
+    contactEmail: obfuscateEmail(config.contact?.email || ""),
     footerButtonwall: footerButtonwall(),
     footerWebring: footerWebring(),
   });
@@ -155,7 +159,7 @@ function analyticsSnippet() {
 function contactCard() {
   return `<aside class="contact-card">
   <p><strong>Próximamente, sección de comentarios.</strong></p>
-  <p>Escríbeme si no a mi mail: geroluna44[arroba]proton.me</p>
+  <p>Escríbeme si no a mi mail: ${obfuscateEmail(config.contact?.email || "")}</p>
 </aside>`;
 }
 

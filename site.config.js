@@ -12,7 +12,7 @@ export default {
     goatcounter: "",
   },
   contact: {
-    email: "geroluna44@proton.me",
+    email: "geroluna_44@proton.me",
     // Button Wall: imágenes en src/public/buttonwall/, cada una con su URL.
     // URL vacía = imagen sin enlace.
     buttonwall: [
