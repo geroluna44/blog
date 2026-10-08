@@ -24,6 +24,11 @@ export default {
       { file: "steam.gif", url: "https://steamcommunity.com/id/geroluna_44" },
     ],
   },
+  webring: {
+    // Webring del footer (blogblog.es). enabled: false o src vacío = desactivado.
+    enabled: true,
+    src: "https://blogblog.es/webring.js",
+  },
   comments: {
     // Configuración de Giscus. Deja vacío para desactivar.
     // Requiere un repo de GitHub con Discussions habilitado.

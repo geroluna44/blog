@@ -119,6 +119,7 @@ function renderBase(content, title, description) {
     analytics: analyticsSnippet(),
     contactEmail: config.contact?.email || "",
     footerButtonwall: footerButtonwall(),
+    footerWebring: footerWebring(),
   });
 }
 
@@ -138,6 +139,12 @@ function footerButtonwall() {
         : `<span class="buttonwall-link is-placeholder">${img}</span>`;
     })
     .join("");
+}
+
+function footerWebring() {
+  const webring = config.webring;
+  if (!webring?.enabled || !webring.src) return "";
+  return `<div class="webring-container"><script defer src="${escapeHtml(webring.src)}"></script></div>`;
 }
 
 function analyticsSnippet() {

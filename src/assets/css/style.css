@@ -367,6 +367,10 @@ main {
   image-rendering: pixelated;
 }
 
+.webring-container {
+  margin-bottom: 1.25rem;
+}
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
