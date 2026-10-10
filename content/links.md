@@ -23,6 +23,7 @@ Decidí no darle orden ni subcategorías a los links. Todo lo que recomiendo es 
 - [Pato Bonato](https://www.youtube.com/@PatoBonato): Análisis sobre lugares en el mundo para migrar.
 - [Linux Chad](https://www.youtube.com/@LinuxChad): Linux, programación y mundo compus.
 - [BeBestBeast](https://www.youtube.com/@BeBestBeast): Entrenamientos clásicos de strongman, bonebuilding, lucha, etc. Enfocado desde entrenamientos "alternativos" y evidencia científica. Muy recomendable.
+- [Alberto Barberá](https://www.youtube.com/@alberbarbera/): Sobre entrenamientos para Artes Marciales; mentalidad de luchadores, sube también blogs y opiniones personales. Un personajazo.
 ## Podcasts
 - [La Fábrica Podcast](https://www.youtube.com/playlist?list=PLzWtjA9pX3ZVo2Mtwy6uhxSshVQeX9Jdm): Podcast sobre empresarios y emprendedores argentinos.
 - [A Una Palabra](https://www.youtube.com/playlist?list=PLaIuqfqGVacfPc_P5wVR_v7sAIaNjNOfV): presentado por Adrià Solà Pastor. Temas claramente enfocados a desarrollo personal, pero muy interesantes.
