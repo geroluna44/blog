@@ -424,6 +424,87 @@ main {
   color: var(--accent-dim);
 }
 
+.home-tags {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-tags-title {
+  margin: 0 0 1.5rem;
+  color: var(--accent-dim);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tags-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.tags-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tags-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.tags-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.tags-track .tag {
+  flex: 0 0 auto;
+  margin-right: 0;
+  white-space: nowrap;
+}
+
+.tags-arrow {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.tags-arrow:hover:not([disabled]) {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.tags-arrow[disabled] {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.home-tags.is-static .tags-arrow {
+  display: none;
+}
+
 .archive-title,
 .page-title {
   margin: 0 0 2.5rem;

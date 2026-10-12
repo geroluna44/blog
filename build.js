@@ -12,6 +12,11 @@ const STATIC_PAGES = ["quien-soy.md", "links.md", "ahora.md"];
 const DIST_DIR = join(ROOT, "dist");
 const { site } = config;
 
+// URL base para resolver assets/links relativos.
+// En producción = site.url (subruta de GitHub Pages).
+// Para preview local: SITE_URL=/ npm run build
+const baseUrl = process.env.SITE_URL || site.url;
+
 const md = new MarkdownIt({ html: false, linkify: true, typographer: true });
 
 function readTemplate(name) {
@@ -116,7 +121,7 @@ function renderBase(content, title, description) {
     title: title ? `${title} · ${site.title}` : site.title,
     description: description || site.description,
     siteTitle: site.title,
-    siteUrl: site.url,
+    siteUrl: baseUrl,
     year: new Date().getFullYear(),
     author: site.author,
     content,
@@ -228,11 +233,25 @@ function main() {
   mkdirSync(join(DIST_DIR, "blog"), { recursive: true });
   mkdirSync(join(DIST_DIR, "tags"), { recursive: true });
 
+  const tagMap = new Map();
+  for (const post of posts) {
+    for (const tag of post.tags) {
+      if (!tagMap.has(tag)) tagMap.set(tag, []);
+      tagMap.get(tag).push(post);
+    }
+  }
+
+  const tagsStrip = Array.from(tagMap.entries())
+    .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "es"))
+    .map(([tag]) => `<a class="tag" href="tags/${slugify(tag)}/">${escapeHtml(tag)}</a>`)
+    .join("");
+
   const previews = renderList(posts.slice(0, 3));
   const homeContent = renderTemplate(homeTemplate, {
     blogDescription: site.description,
     previews,
     blogUrl: "blog/",
+    tags: tagsStrip,
   });
   writeFileSync(join(DIST_DIR, "index.html"), renderBase(homeContent, "", site.description));
 
@@ -263,13 +282,6 @@ function main() {
     writeFileSync(join(DIST_DIR, "posts", post.slug, "index.html"), page);
   }
 
-  const tagMap = new Map();
-  for (const post of posts) {
-    for (const tag of post.tags) {
-      if (!tagMap.has(tag)) tagMap.set(tag, []);
-      tagMap.get(tag).push(post);
-    }
-  }
   for (const [tag, tagPosts] of tagMap) {
     const page = renderTemplate(tagTemplate, {
       tag: escapeHtml(tag),
