@@ -1,6 +1,6 @@
 ---
 title: "Añadí buscador por tags"
-description: "Añadí un buscador por tags a mi blog"}
+description: "Añadí un buscador por tags a mi blog"
 date: "2026-11-12"
 tags ["este sitio"]
 ---

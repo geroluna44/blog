@@ -4,7 +4,7 @@ export default {
     author: "geroluna44",
     url: "https://geroluna44.github.io/blog/",
     lang: "es",
-    description: "Bienvenido a mi blog personal. Escribo sobre videojuegos, arte, política, software, religión, música, filosofia... de todo un poco.",
+    description: "Bienvenido a mi blog personal. Escribo sobre videojuegos, artes marciales, política, software, religión, mundo web, filosofia... de todo un poco.",
   },
   analytics: {
     // Dominio de GoatCounter (ej. "blog.gero.goatcounter.com").
