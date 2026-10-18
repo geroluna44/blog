@@ -2,9 +2,9 @@
 title: "Análisis de FAITH"
 description: "Análisis del videojuego FAITH. En FAITH somos un joven sacerdote que debe exorcizar a una niña poseida"
 date: 2026-10-18
-tags: ["videojuegos", "análisis de videojuegos"]
+tags: ["videojuegos", "reseñas de videojuegos"]
 ---
-![faith](![https://images.steamusercontent.com/ugc/14864474103632312483/7728CF3C76020E5ADAF5E2C96328245B770B5687/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false](faith)
+![faith]([https://images.steamusercontent.com/ugc/14864474103632312483/7728CF3C76020E5ADAF5E2C96328245B770B5687/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false](faith)
 )
 
 En FAITH somos un joven sacerdote que debe exorcizar a una niña poseida. El acto I comienza con John Thomas Ward, el cura protagonista, llegando a la casa de la familia víctima de la posesión diciendo "Debo terminar lo que empecé". A lo largo de los tres actos vamos a ir viendo cómo el demonio intenta apoderarse de la psiquis del protagonista.
