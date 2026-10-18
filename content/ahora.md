@@ -7,7 +7,7 @@ Bienvenido a esta sección que [se ha puesto de moda](https://nownownow.com/abou
 ## Videojuegos
 
 - S.T.A.L.K.E.R. 2 (a ver si me lo termino este año)
-- FAITH
+- Sonic Generations
 - It takes Two (con mi novia)
 
 ## Series / Últimas peliculas que vi
